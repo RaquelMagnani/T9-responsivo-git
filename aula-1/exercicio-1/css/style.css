@@ -1,26 +1,34 @@
 /* GERAL */
 * {
-    box-sizing: border-box; /* tamanho leva em consideração o padding */
+    box-sizing: border-box;
+    /* tamanho leva em consideração o padding */
 }
 
 body {
-    background-color: #e4d2e6; /* determina a cor de fundo de um elemento */
-    font-family: 'Lato', Arial, Helvetica, sans-serif; /* determina o tipo de fonte */
+    background-color: #e4d2e6;
+    /* determina a cor de fundo de um elemento */
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    /* determina o tipo de fonte */
 }
 
 a {
-    text-decoration: none; /* define algum tipo de decoração no texto. Valores: overline, line-through, underline, underline overline */
+    text-decoration: none;
+    /* define algum tipo de decoração no texto. Valores: overline, line-through, underline, underline overline */
 }
 
 img {
-    width: 85%; /* define o comprimento */
+    width: 85%;
+    /* define o comprimento */
 }
 
 /* FONTS */
 h1 {
-    text-align: right; /* define o alinhamento do texto */
-    font-size: 35px; /* define o tamanho da fonte. Unidades possíveis são px, em, rem, entre outros */
-    text-transform: uppercase; /*define alguma mudança na própria fonte. Valores possíveis: lowercase, uppercase, capitalize */
+    text-align: right;
+    /* define o alinhamento do texto */
+    font-size: 35px;
+    /* define o tamanho da fonte. Unidades possíveis são px, em, rem, entre outros */
+    text-transform: uppercase;
+    /*define alguma mudança na própria fonte. Valores possíveis: lowercase, uppercase, capitalize */
 }
 
 h2 {
@@ -30,7 +38,7 @@ h2 {
 p {
     width: 430px;
     margin-bottom: 110px;
-    text-align: right;  
+    text-align: right;
 }
 
 /* UTILITIES */
@@ -49,13 +57,16 @@ p {
 }
 
 .section-sobre {
-   width: 960px;
-   margin: 0 auto; /* macete para deixar elementos block centralizados */
-   margin-top: 100px;
+    max-width: 960px;
+    margin: 0 auto;
+    /* macete para deixar elementos block centralizados */
+    margin-top: 100px;
+
 }
 
 .sobre-conteudo__botoes {
-    text-align: right; /* esse tipo de alinhamento para botões não funciona se for colocado diretamente no elemento <a>. Deve-se colocar essa propriedade no elemento mãe */
+    text-align: right;
+    /* esse tipo de alinhamento para botões não funciona se for colocado diretamente no elemento <a>. Deve-se colocar essa propriedade no elemento mãe */
 }
 
 .btn {
@@ -65,11 +76,34 @@ p {
 
 .btn_roxo {
     background-color: #5d1277;
-    color: white; /* define a cor do conteúdo do elemento */
+    color: white;
+    /* define a cor do conteúdo do elemento */
 }
 
 .btn_transp {
     color: #5d1277;
-    border: 1px solid #5d1277; /* cria uma borda no elemento. Ordem de valores: grossura-da-borda tipo-da-borda cor-da-borda. */
+    border: 1px solid #5d1277;
+    /* cria uma borda no elemento. Ordem de valores: grossura-da-borda tipo-da-borda cor-da-borda. */
 }
 
+@media screen and (max-width:800px) {
+
+    .sobre-conteudo,
+    .sobre-imagem {
+        width: 100%;
+    }
+    h1, h2, p{
+        text-align: center;
+    }
+    .p{
+        max-width:  430px;
+        margin: auto 110px auto;
+    }
+    .sobre-conteudo__botoes {
+        text-align: center;
+    }
+    img {
+        width: 100%;
+        margin-top: 40px;
+    }
+}

@@ -7,29 +7,48 @@ header {
     background: url(../img/gato-background.jpg);
     background-size: cover;
     background-position: center;
-    height: 180px;  
-    align-items: center;  
+    height: 180px;
+    align-items: center;
 }
+
 header div {
     align-items: center;
     display: flex;
 }
+
 h1 {
     font-weight: bold;
     text-align: center;
     padding: 20px;
 }
+
 /* Main */
 main {
     padding: 100px;
 }
+
 .todos {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: row;
 }
+
 .todos div img {
     width: 250px;
-    height: 150px;   
+    height: 150px;
 }
+
 /*  */
+@media screen and (max-width:768px) {
+header div{
+    flex-direction: column;
+}
+.todos{ 
+        flex-wrap: wrap;
+    }
+    .todos: :last-child{
+        margin-top: 0;
+    }
+
+}
